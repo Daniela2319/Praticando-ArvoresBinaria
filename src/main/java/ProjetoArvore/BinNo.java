@@ -1,19 +1,27 @@
 package ProjetoArvore;
 
+/**
+ * Classe BinNo extenção e comparação dos nós.
+ * @param <T> Tipo genérica.
+ */
 public class BinNo<T extends Comparable<T>> {
 
+    //Atributos
     private T conteudo;
     private BinNo<T> noEsq;
     private BinNo<T> noDir;
 
+    //Construtor
     public BinNo(T conteudo) {
         this.conteudo = conteudo;
         noEsq = noDir = null;
     }
 
+    //Construtor vazio
     public BinNo(){
     }
 
+    //Getter e Setter
     public T getConteudo() {
         return conteudo;
     }
@@ -38,6 +46,7 @@ public class BinNo<T extends Comparable<T>> {
         this.noDir = noDir;
     }
 
+    //To String
     @Override
     public String toString() {
         return "BinNo{" +
